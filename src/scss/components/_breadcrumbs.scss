@@ -1,0 +1,23 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+.breadcrumbs {
+  padding: 41px 0 20px;
+  li {
+    display: inline-block;
+    color: #8891AC;
+
+    a {
+      text-decoration: none;
+      color: #8891AC;
+
+      &:hover { color: $gray;}
+    }
+    
+    &:not(:last-child)::after {
+      content: '/';
+      padding: 0 14px;
+    }
+  }
+}

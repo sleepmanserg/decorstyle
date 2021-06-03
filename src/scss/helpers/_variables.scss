@@ -1,0 +1,41 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+// --------------------------------------------------
+
+$light-dim-bg:      #FAFAFA;
+$gray-super-light:  #f7f6f6;
+$gray-lighter:      #8f9093;
+$gray-light:        #A7AEC5;
+$gray:              #19295E;
+$gray-dark:         #272425;
+$gray-darker:       #000000;
+
+$primary:           #344556;
+$accent:            #F35141;
+$danger:            #FF0032;
+$info:              #6D60FF;
+$blue:              #4D76FB;
+
+
+//== Font & Family
+// --------------------------------------------------
+$main-family: 'Proxima Nova';
+
+$font-size-sm:      12px;
+$font-size-md:      14px;
+$font-size-lg:      15px;
+$font-size-xl:      16px;
+$font-size-lead:    24px;
+
+//== Media queries (responsive breakpoints)
+// -------------------------------------------------------
+
+$desktop:   		   '1200px';
+$tablet-land:      '991px';
+$tablet-port:    	 '768px';
+$mobile-land:		 	 '480px';
+$mobile-port:		 	 '360px';
+$menu-collapse: 	 $tablet-land;

@@ -1,0 +1,132 @@
+//
+// Cart
+// --------------------------------------------------
+
+.cart-modal {
+  .modal-header {
+    @media (max-width: $tablet-land) {
+      h4 {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .cart-footer {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .price-total {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 24px;
+  
+      .color-gray-light {
+        margin-right: 10px;
+      }
+    }
+
+    @media (max-width: $tablet-land) {
+      .buttons {
+        .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.cart-table {
+  .cart-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    .cart-item-thumb {
+      flex: 0 0 80px;
+      margin-right: 26px;
+    }
+
+    .cart-item-body {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cart-item-meta {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .cart-item-info {
+      max-width: 179px;
+      width: 100%;
+    }
+
+    .cart-item-name {
+      font-size: 14px;
+      font-weight: 600;
+
+    }
+
+    .cart-qty {
+      flex: 0 0 96px;
+      margin-right: 26px;
+      margin-left: auto;
+    }
+
+    .cart-price {
+      margin-left: auto;
+      margin-right: 26px;
+    }
+
+    .close {
+      font-size: 8px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: $danger;
+    }
+    @media (max-width: $tablet-land) {
+      padding: 12px 0;
+      .close {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        margin-right: 0 !important;
+      }
+
+      .title { display: none;}
+
+      .cart-item-body {
+        flex-direction: column;
+      }
+
+      .cart-item-info {
+        display: flex;
+        max-width: none;
+        flex-direction: column-reverse;
+      }
+
+      .cart-item-meta {
+        justify-content: flex-start;
+        align-items: start;
+        margin-top: 20px;
+
+        .cart-qty {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+}

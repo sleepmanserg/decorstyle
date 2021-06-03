@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'decorStyle';
+  src:
+    url('../fonts/decorStyle.ttf?vwk8iy') format('truetype'),
+    url('../fonts/decorStyle.woff?vwk8iy') format('woff'),
+    url('../fonts/decorStyle.svg?vwk8iy#decorStyle') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ds-"], [class*=" ds-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'decorStyle' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.ds-filter:before {
+  content: "\e91a";
+  color: #19295e;
+}
+.ds-sorting:before {
+  content: "\e91b";
+}
+.ds-envelope:before {
+  content: "\e918";
+}
+.ds-box:before {
+  content: "\e919";
+}
+.ds-burger:before {
+  content: "\e917";
+}
+.ds-search:before {
+  content: "\e916";
+}
+.ds-phone-24px:before {
+  content: "\e914";
+}
+.ds-check-24px:before {
+  content: "\e901";
+}
+.ds-radio_button_unchecked-24px:before {
+  content: "\e903";
+}
+.ds-arrow_back-24px:before {
+  content: "\e905";
+}
+.ds-arrow_forward-24px:before {
+  content: "\e906";
+}
+.ds-keyboard_arrow_down-24px:before {
+  content: "\e90a";
+}
+.ds-keyboard_arrow_left-24px:before {
+  content: "\e90b";
+}
+.ds-keyboard_arrow_right-24px:before {
+  content: "\e90c";
+}
+.ds-keyboard_arrow_up-24px:before {
+  content: "\e915";
+}
+.ds-bag:before {
+  content: "\e900";
+}
+.ds-close:before {
+  content: "\e902";
+}
+.ds-flowers-ico:before {
+  content: "\e904";
+}
+.ds-holiday-ico:before {
+  content: "\e907";
+}
+.ds-home-ico:before {
+  content: "\e908";
+}
+.ds-instagram:before {
+  content: "\e909";
+}
+.ds-lock1:before {
+  content: "\e90d";
+}
+.ds-play-button-1:before {
+  content: "\e90e";
+}
+.ds-profile-ico:before {
+  content: "\e90f";
+}
+.ds-edit:before {
+  content: "\e910";
+}
+.ds-favotite:before {
+  content: "\e911";
+}
+.ds-warning:before {
+  content: "\e912";
+}
+.ds-hearts:before {
+  content: "\e913";
+}

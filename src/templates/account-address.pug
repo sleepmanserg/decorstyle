@@ -1,0 +1,183 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+  //- ********** Settings **********
+  //- ==============================
+  -var pageTitle = 'Account Address'
+  //- ==============================
+  //- ********* Settings END *******
+
+//- Page Content
+block content
+
+  //Catalog Title, Filter Toggles etc.
+  section.bg-dim-light
+    .container
+      h1.pt-5.pb-4.m-0 Адресса доставки
+
+  section.bg-dim-light.pb-5
+    .container.d-flex.align-items-start.flex-column.flex-lg-row
+
+      //Filters Section, Same section for Mobile
+      aside.account-sidebar
+
+        //Widget List or Menu
+        .widget.widget-list-items.mobile-horizontal
+          ul
+            li
+              a(href="account-data.html") Мои данные
+            li.active
+              a(href="account-address.html") Адреса доставки
+            li.d-none.d-lg-block
+              a(href="account-wishlist.html") Список желаний
+            li
+              a(href="account-orders.html") Мои заказы
+
+
+      //Container for Items
+      .w-100.p-2.p-lg-5.bg-white-desktop
+        .row.pb-4
+          .col-xl-8
+            .mb-5
+              h2.h4.mb-4 Мои адреса
+
+              .address-edit
+                a(data-toggle="modal" href="#addressEditModal").edit-icon
+                  i.ds-edit
+                .title
+                  h6.font-weight-bold Отделение «Новая почта»
+                    span.color-gray-light.ml-2.font-weight-normal (выбран по умолчанию)
+                .address-name.text-md
+                  | Одесса,  № 105, ул. Длинноименная, 15
+
+              .address-edit
+                a(data-toggle="modal" href="#addressEditModal").edit-icon
+                  i.ds-edit
+                .title
+                  h6.font-weight-bold Отделение «Новая почта»
+                .address-name.text-md
+                  | Одесса,  № 105, ул. Длинноименная, 15
+
+              .address-edit
+                a(data-toggle="modal" href="#addressEditModal").edit-icon
+                  i.ds-edit
+                .title
+                  h6.font-weight-bold Отделение «Новая почта»
+                .address-name.text-md
+                  | Одесса,  № 105, ул. Длинноименная, 15
+
+              .address-edit
+                a(data-toggle="modal" href="#addressEditModal").edit-icon
+                  i.ds-edit
+                .title
+                  h6.font-weight-bold Отделение «Новая почта»
+                .address-name.text-md
+                  | Одесса,  № 105, ул. Длинноименная, 15
+
+
+
+  //!!!IMPORTANT!!!
+  //If modal contain select2 with search input
+  //Please make sure that modal parent has attribute tabindex='-1' removed!
+  //It has collision
+
+  // Modal Address Edit
+  #addressEditModal.modal.fade(role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content.p-4
+        .modal-header.d-flex.justify-content-between.p-0.border-0
+          h4 Редактирование адреса
+          i.close.ds-close.text-md(data-dismiss='modal', aria-label='Close')
+
+        .modal-main
+          .row
+            .col-lg-10
+              .my-4
+                label.color-gray.opacity-60.mb-2 Ваш Город
+                .search-complete.input-md.w-100
+                  select
+                    option Одесса
+                    option Киев
+                    option Николаев
+                    option Херсон
+                    option Львов
+                    option Тернополь
+                    option Винница
+                    option Ивано-Франковск
+
+              .mb-4
+                .color-gray.opacity-60.mb-2 Способ доставки
+                label.form-radio
+                  input(type='radio', checked='checked', name='radio')
+                  .siblling
+                    span.checkmark
+                    span Самовывоз из Новой Почты
+
+                  .siblling.secelect-box.pl-4.ml-2.py-3
+                    .search-complete.input-md.w-100
+                      select
+                        option №2 ул. Бережанская, 9
+                        option №2 ул. Бережанская, 10
+                        option №2 ул. Бережанская, 11
+                        option №2 ул. Бережанская, 12
+                        option №2 ул. Бережанская, 13
+                        option №2 ул. Бережанская, 14
+
+                label.form-radio
+                  input(type='radio', name='radio')
+                  .siblling
+                    span.checkmark.siblling
+                    sapn Адресная доставка Новой Почтой
+
+                  .siblling.secelect-box.pl-4.ml-2.py-3
+                    .search-complete.input-md.w-100
+                      select
+                        option №2 ул. Бережанская, 9
+                        option №2 ул. Бережанская, 10
+                        option №2 ул. Бережанская, 11
+                        option №2 ул. Бережанская, 12
+                        option №2 ул. Бережанская, 13
+                        option №2 ул. Бережанская, 14
+
+                label.form-radio
+                  input(type='radio', name='radio')
+                  .siblling
+                    span.checkmark.siblling
+                    span Отделение Интайм
+
+                  .siblling.secelect-box.pl-4.ml-2.py-3
+                    .search-complete.input-md.w-100
+                      select
+                        option №2 ул. Бережанская, 9
+                        option №2 ул. Бережанская, 10
+                        option №2 ул. Бережанская, 11
+                        option №2 ул. Бережанская, 12
+                        option №2 ул. Бережанская, 13
+                        option №2 ул. Бережанская, 14
+
+                label.form-radio
+                  input(type='radio', name='radio')
+                  .siblling
+                    span.checkmark.siblling
+                    span  Отделение Деливери
+
+                  .siblling.secelect-box.pl-4.ml-2.py-3
+                    .search-complete.input-md.w-100
+                      select
+                        option №2 ул. Бережанская, 9
+                        option №2 ул. Бережанская, 10
+                        option №2 ул. Бережанская, 11
+                        option №2 ул. Бережанская, 12
+                        option №2 ул. Бережанская, 13
+                        option №2 ул. Бережанская, 14
+
+          .py-4.d-flex.align-items-md-center.justify-content-between.flex-column.flex-md-row
+            label.checkbox-inline.mb-3.mb-md-0
+              .form-check
+                input(type="checkbox" checked="checked")
+                .check-mark
+              | Использовать по умолчанию
+
+            a(href="#").btn.btn-solid.btn-accent сохранить

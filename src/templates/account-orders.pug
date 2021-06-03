@@ -1,0 +1,592 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+  //- ********** Settings **********
+  //- ==============================
+  -var pageTitle = 'Account Orders'
+  //- ==============================
+  //- ********* Settings END *******
+
+//- Page Content
+block content
+
+  //Catalog Title, Filter Toggles etc.
+  section.bg-dim-light
+    .container
+      h1.pt-5.pb-4.m-0 Мои заказы
+
+  section.bg-dim-light.pb-5
+    .container.d-flex.align-items-start.flex-column.flex-lg-row
+
+      //Filters Section, Same section for Mobile
+      aside.account-sidebar
+
+        //Widget List or Menu
+        .widget.widget-list-items.mobile-horizontal
+          ul
+            li
+              a(href="account-data.html") Мои данные
+            li
+              a(href="account-address.html") Адреса доставки
+            li.d-none.d-lg-block
+              a(href="account-wishlist.html") Список желаний
+            li.active
+              a(href="account-orders.html") Мои заказы
+
+
+      //Container for Items
+      .w-100.p-2.p-lg-5.bg-white-desktop
+        .row.pb-4
+          .col-xl-9
+            .mb-5
+              h2.h4.mb-4 Мои заказы
+
+              ul.nav.border-bottom.order-menu
+                li
+                  a.text-lg.font-weight-semi-bold.active.show(data-toggle="tab", href='#tab1', role='tab') Мои заказы
+                li
+                  a.text-lg.font-weight-semi-bold(data-toggle="tab", href='#tab2', role='tab') Текущие
+                li
+                  a.text-lg.font-weight-semi-bold(data-toggle="tab", href='#tab3', role='tab') Завершенные
+                li
+                  a.text-lg.font-weight-semi-bold(data-toggle="tab", href='#tab4', role='tab') Отмененные
+
+
+              // Tab panes
+              .tab-content.pb-5
+                #tab1.tab-pane.fade.show.active(role='tabpanel')
+                  .order-item-wrap
+                    .order-item(data-toggle="collapse" data-target="#order01").collapsed
+                      .order-date 18 октября 2019
+                      .order-id №940909к0
+                      .order-status Обрабатывается
+                      i.ds-keyboard_arrow_down-24px.text-lead.color-gray-light
+
+                    .order-info-wrap.collapse#order01(data-parent="#tab1")
+                      .order-info
+                        .order-data
+                          ul.flex-column.dotted-list.d-none.d-md-flex
+                            li.color-gray-light Имя получателя
+                            li.color-gray-light Электронная почта
+                            li.color-gray-light Телефон
+                            li.color-gray-light Отправка
+                            li.color-gray-light Отделение
+                            li.color-gray-light Оплата
+
+                          ul.d-flex.flex-column
+                            li.color-gray Вадим Кириленко
+                            li.color-gray vadim@gmail.com
+                            li.color-gray +380 67 555 55 55
+                            li.color-gray Новая Почта
+                            li.color-gray Одесса,  № 105, ул. Длинноименная, 15
+                            li.color-gray На карту «ПриватБанка»
+
+                        .order-contain.mt-5
+                          .cart-table
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/02.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Свеча декоративная "Simple" 12шт/уп.
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 367,60 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+
+
+                          .order-total.d-flex.pr-4
+                            .text-lead.font-weight-bold.ml-auto.mr-0 76 683 грн
+
+
+
+                  .order-item-wrap
+                    .order-item(data-toggle="collapse" data-target="#order02").collapsed
+                      .order-date 18 октября 2019
+                      .order-id №940909к0
+                      .order-status.text-success Выполнен/доставлен
+                      i.ds-keyboard_arrow_down-24px.text-lead.color-gray-light
+
+                    .order-info-wrap.collapse#order02(data-parent="#tab1")
+                      .order-info
+                        .order-data
+                          ul.flex-column.dotted-list.d-none.d-md-flex
+                            li.color-gray-light Имя получателя
+                            li.color-gray-light Электронная почта
+                            li.color-gray-light Телефон
+                            li.color-gray-light Отправка
+                            li.color-gray-light Отделение
+                            li.color-gray-light Оплата
+
+                          ul.d-flex.flex-column
+                            li.color-gray Вадим Кириленко
+                            li.color-gray vadim@gmail.com
+                            li.color-gray +380 67 555 55 55
+                            li.color-gray Новая Почта
+                            li.color-gray Одесса,  № 105, ул. Длинноименная, 15
+                            li.color-gray На карту «ПриватБанка»
+
+                        .order-contain.mt-5
+                          .cart-table
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/02.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Свеча декоративная "Simple" 12шт/уп.
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 367,60 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+
+
+                          .order-total.d-flex.pr-4
+                            .text-lead.font-weight-bold.ml-auto.mr-0 76 683 грн
+
+
+
+
+
+                  .order-item-wrap
+                    .order-item(data-toggle="collapse" data-target="#order03").collapsed
+                      .order-date 18 октября 2019
+                      .order-id №940909к0
+                      .order-status.text-danger Отменен
+                      i.ds-keyboard_arrow_down-24px.text-lead.color-gray-light
+
+                    .order-info-wrap.collapse#order03(data-parent="#tab1")
+                      .order-info
+                        .order-data
+                          ul.flex-column.dotted-list.d-none.d-md-flex
+                            li.color-gray-light Имя получателя
+                            li.color-gray-light Электронная почта
+                            li.color-gray-light Телефон
+                            li.color-gray-light Отправка
+                            li.color-gray-light Отделение
+                            li.color-gray-light Оплата
+
+                          ul.d-flex.flex-column
+                            li.color-gray Вадим Кириленко
+                            li.color-gray vadim@gmail.com
+                            li.color-gray +380 67 555 55 55
+                            li.color-gray Новая Почта
+                            li.color-gray Одесса,  № 105, ул. Длинноименная, 15
+                            li.color-gray На карту «ПриватБанка»
+
+                        .order-contain.mt-5
+                          .cart-table
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/02.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Свеча декоративная "Simple" 12шт/уп.
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 367,60 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+
+
+                          .order-total.d-flex.pr-4
+                            .text-lead.font-weight-bold.ml-auto.mr-0 76 683 грн
+
+
+
+
+
+                #tab2.tab-pane.fade(role='tabpanel')
+                  .order-item-wrap
+                    .order-item(data-toggle="collapse" data-target="#order001").collapsed
+                      .order-date 18 октября 2019
+                      .order-id №940909к0
+                      .order-status Обрабатывается
+                      i.ds-keyboard_arrow_down-24px.text-lead.color-gray-light
+
+                    .order-info-wrap.collapse#order001(data-parent="#tab2")
+                      .order-info
+                        .order-data
+                          ul.flex-column.dotted-list.d-none.d-md-flex
+                            li.color-gray-light Имя получателя
+                            li.color-gray-light Электронная почта
+                            li.color-gray-light Телефон
+                            li.color-gray-light Отправка
+                            li.color-gray-light Отделение
+                            li.color-gray-light Оплата
+
+                          ul.d-flex.flex-column
+                            li.color-gray Вадим Кириленко
+                            li.color-gray vadim@gmail.com
+                            li.color-gray +380 67 555 55 55
+                            li.color-gray Новая Почта
+                            li.color-gray Одесса,  № 105, ул. Длинноименная, 15
+                            li.color-gray На карту «ПриватБанка»
+
+                        .order-contain.mt-5
+                          .cart-table
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/02.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Свеча декоративная "Simple" 12шт/уп.
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 367,60 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+
+
+                          .order-total.d-flex.pr-4
+                            .text-lead.font-weight-bold.ml-auto.mr-0 76 683 грн
+
+
+
+                  .order-item-wrap
+                    .order-item(data-toggle="collapse" data-target="#order002").collapsed
+                      .order-date 18 октября 2019
+                      .order-id №940909к0
+                      .order-status.text-success Выполнен/доставлен
+                      i.ds-keyboard_arrow_down-24px.text-lead.color-gray-light
+
+                    .order-info-wrap.collapse#order002(data-parent="#tab2")
+                      .order-info
+                        .order-data
+                          ul.flex-column.dotted-list.d-none.d-md-flex
+                            li.color-gray-light Имя получателя
+                            li.color-gray-light Электронная почта
+                            li.color-gray-light Телефон
+                            li.color-gray-light Отправка
+                            li.color-gray-light Отделение
+                            li.color-gray-light Оплата
+
+                          ul.d-flex.flex-column
+                            li.color-gray Вадим Кириленко
+                            li.color-gray vadim@gmail.com
+                            li.color-gray +380 67 555 55 55
+                            li.color-gray Новая Почта
+                            li.color-gray Одесса,  № 105, ул. Длинноименная, 15
+                            li.color-gray На карту «ПриватБанка»
+
+                        .order-contain.mt-5
+                          .cart-table
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/02.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Свеча декоративная "Simple" 12шт/уп.
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 367,60 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+
+
+                          .order-total.d-flex.pr-4
+                            .text-lead.font-weight-bold.ml-auto.mr-0 76 683 грн
+
+
+
+
+
+                  .order-item-wrap
+                    .order-item(data-toggle="collapse" data-target="#order003").collapsed
+                      .order-date 18 октября 2019
+                      .order-id №940909к0
+                      .order-status.text-danger Отменен
+                      i.ds-keyboard_arrow_down-24px.text-lead.color-gray-light
+
+                    .order-info-wrap.collapse#order003(data-parent="#tab2")
+                      .order-info
+                        .order-data
+                          ul.flex-column.dotted-list.d-none.d-md-flex
+                            li.color-gray-light Имя получателя
+                            li.color-gray-light Электронная почта
+                            li.color-gray-light Телефон
+                            li.color-gray-light Отправка
+                            li.color-gray-light Отделение
+                            li.color-gray-light Оплата
+
+                          ul.d-flex.flex-column
+                            li.color-gray Вадим Кириленко
+                            li.color-gray vadim@gmail.com
+                            li.color-gray +380 67 555 55 55
+                            li.color-gray Новая Почта
+                            li.color-gray Одесса,  № 105, ул. Длинноименная, 15
+                            li.color-gray На карту «ПриватБанка»
+
+                        .order-contain.mt-5
+                          .cart-table
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/02.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Свеча декоративная "Simple" 12шт/уп.
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 367,60 грн
+
+                            //Cart Item
+                            .cart-item.border-top
+                              .cart-item-thumb
+                                img(src="img/cart-thumb/01.jpg")
+
+                              .cart-item-body
+                                .cart-item-info
+                                  .cart-item-name
+                                    | Подсвечник стеклянный "Ones"
+
+                                .cart-item-meta
+                                  .cart-qty
+                                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                                  .cart-price
+                                    .price.font-weight-semi-bold 356,00 грн
+
+
+
+                          .order-total.d-flex.pr-4
+                            .text-lead.font-weight-bold.ml-auto.mr-0 76 683 грн
+
+                #tab3.tab-pane.fade(role='tabpanel')
+                  .py-5.my-5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates.
+
+                #tab4.tab-pane.fade(role='tabpanel')
+                  .py-5.my-5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque eaque esse id magni molestiae neque nihil officia praesentium quis quisquam, quod rem repellat repudiandae rerum sapiente sint unde, voluptates.
+

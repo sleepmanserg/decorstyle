@@ -1,0 +1,109 @@
+//
+// Buttons
+// --------------------------------------------------
+
+.unstyled-button {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn {
+  display: inline-flex;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  padding-left: 26px;
+  padding-right: 26px;
+  border: 1px solid transparent;
+  transition: .25s;
+  border-radius: 2px;
+  font-weight: bold;
+  height: 40px;
+  font-size: 16px;
+  text-decoration: none !important;
+  cursor: pointer;
+
+  //Button Sizes
+  &.btn-sm {
+    height: 34px;
+    font-size: 12px;
+  }
+  &.btn-lg {
+    height: 50px;
+    font-size: 17px;
+  }
+
+
+  //Solid Buttons
+  &.btn-solid {
+    color: #fff;
+
+    &.btn-info {
+      background-color: $info;
+
+      &:hover {
+        background-color: darken($info, 4%);
+      }
+    }
+    &.btn-accent {
+      background-color: $accent;
+
+      &:hover {
+        background-color: darken($accent, 8%);
+      }
+    }
+  }
+
+  //Outlined Buttons
+  &.btn-outline {
+    background-color: #fff;
+    
+    &.btn-accent {
+      color: $accent;
+      border-color: $accent;
+      
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
+    } 
+  }
+
+  &[disabled],
+  &.disabled {
+    background-color: $gray-light !important;
+    cursor: not-allowed;
+    user-select: none;
+  }
+}
+
+//Link With Dashed Underline
+.blue-link {
+  color: $blue !important;
+  border-bottom: 1px dashed;
+  border-bottom: 1px dashed;
+  text-decoration: none !important;
+  &:hover { border-color: transparent;}
+}
+
+//Social Buttons
+.btn-social {
+  background-color: rgba(#C9CFE1, .2);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 13px;
+  padding-right: 13px;
+  img, i {
+    font-size: 22px;
+    width: 22px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  span {
+    width: 100%;
+    text-align: center;
+  }
+}

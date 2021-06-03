@@ -1,0 +1,28 @@
+//
+// Home page specific styles
+// --------------------------------------------------
+.main-slider-wrap {
+  padding-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .main-slider {
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+
+  @media (max-width: $tablet-land) {
+    padding-left: 10px;
+    padding-right: 0;
+    padding-top: 20px;
+
+    .nav { display: none}
+    .slide { padding-right: 13px;}
+    .slick-list {
+      padding-right: 14px;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+//
+// Sliders
+// --------------------------------------------------
+
+//Nav vertically centred
+.centred-nav {
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//Rounded buttons
+.white-nav {
+  .nav {
+    .slick-arrow {
+      width: 56px;
+      height: 56px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      transition: .2s;
+      cursor: pointer;
+      font-size: 24px;
+
+      &:hover { box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);}
+
+      &:first-child { margin-left: -28px;}
+      &:last-child { margin-right: -28px;}
+    }
+  }
+}
+
+.small-arrow-nav {
+  .nav {
+    display: flex;
+    .slick-arrow {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: rgba($gray, .1);
+      transition: .2s;
+      cursor: pointer;
+      margin-left: 18px;
+      font-size: 20px;
+
+      &:hover {
+        background-color: rgba($gray, .3);
+      }
+
+      @media (max-width: $tablet-land) {
+        width: 27px;
+        height: 27px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.slick-slide { height: auto !important;}

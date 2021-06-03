@@ -1,0 +1,38 @@
+//Off Canvas Mobile Menu
+aside.offcanvas-mobile-menu
+  .mobile-topbar.d-flex.align-items-center.justify-content-between.border-bottom
+    a(href="tel:+380634539419").phone.mr-4.text-sm
+      i.ds-phone-24px.pr-2
+      | +38 (063) 453-94-19
+
+    .topbar-tools.d-flex
+      .lang-switcher
+        span.text-sm RU
+        | |
+        a(href="#").text-sm UA
+
+  nav.accordion-nav
+    include navigation
+
+  ul.mobile-tools
+    li
+      a(href="#" type='button', data-toggle='modal', data-target='#loginModal')
+        i.ds-profile-ico
+        | Профиль
+    li
+      a(data-toggle="modal" href="#cartModal")
+        i.ds-bag
+        | Корзина
+    li
+      a(href="account-wishlist.html")
+        i.ds-favotite
+        | Список желаний
+    li
+      a(href="delivery.html")
+        i.ds-box
+        | Оплата и доставка
+    li
+      a(href="contacts.html")
+        i.ds-envelope
+        | Контакты
+

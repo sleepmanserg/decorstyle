@@ -1,0 +1,45 @@
+//
+// Pagination
+// --------------------------------------------------
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+
+  ul {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  a, li {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-decoration: none;
+    color: $gray-darker;
+
+    &:hover { color: $accent;}
+  }
+
+  .active {
+    a {
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+  @media (max-width: $tablet-land) {
+    ul {margin-bottom: 6px;}
+    a, li {
+      font-size: 20px;
+      width: 24px;
+      height: 24px;
+      line-height: 1.2;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+  //- ********** Settings **********
+  //- ==============================
+  -var pageTitle = 'Account Data'
+  //- ==============================
+  //- ********* Settings END *******
+
+//- Page Content
+block content
+
+  //Catalog Title, Filter Toggles etc.
+  section.bg-dim-light
+    .container
+      h1.pt-5.pb-4.m-0 Мои данные
+
+  section.bg-dim-light.pb-5
+    .container.d-flex.align-items-start.flex-column.flex-lg-row
+
+      //Filters Section, Same section for Mobile
+      aside.account-sidebar
+
+        //Widget List or Menu
+        .widget.widget-list-items.mobile-horizontal
+          ul
+            li.active
+              a(href="account-data.html") Мои данные
+            li
+              a(href="account-address.html") Адреса доставки
+            li.d-none.d-lg-block
+              a(href="account-wishlist.html") Список желаний
+            li
+              a(href="account-orders.html") Мои заказы
+
+
+      //Container for Items
+      .w-100.bg-white.p-5
+        .row.pb-4
+          .col-xl-7
+            .d-flex.justify-content-between.align-items-center.mb-5
+              h2.h4 Мои данные
+              a(data-toggle="modal" href="#").blue-link.d-none.d-md-block Изменить пароль
+
+            .mb-4
+              label.color-gray.opacity-60.mb-2 Имя и фамилия
+              input(type="text" placeholder="Игорь Петров")
+            .mb-4
+              label.color-gray.opacity-60.mb-2 E-mail
+              input(type="email" placeholder="test@gmail.com")
+            .mb-5
+              label.color-gray.opacity-60.mb-2 Телефон
+              input(type="tel" placeholder="+380 11 111 11 11")
+
+            .d-flex.flex-column.flex-sm-row.align-items-strech.align-items-sm-center.justify-content-between
+              button(type="submit").btn.btn-solid.btn-accent Сохранить
+              a(data-toggle="modal" href="#").blue-link.d-inline-block.d-md-none.align-self-center.mt-4.mt-sm-0 Изменить пароль
+
+
+
+
+
+
+

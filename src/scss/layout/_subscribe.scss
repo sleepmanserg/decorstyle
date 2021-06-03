@@ -1,0 +1,45 @@
+//
+// Subscribe Section
+// --------------------------------------------------
+
+.subscribe-section {
+  background: linear-gradient(94.26deg, #F35141 0%, #F65F50 0.01%, #FF5A36 98.62%);
+  padding-top: 42px;
+  padding-bottom: 42px;
+
+  .subscribe-section-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .descr {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 80px;
+    }
+
+    .input {
+      width: 380px;
+      margin-right: 20px;
+    }
+  }
+  
+  @media (max-width: $tablet-port) {
+    padding-top: 21px;
+    padding-bottom: 25px;
+    .subscribe-section-inner {
+      flex-direction: column;
+
+      .descr {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+      .input {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

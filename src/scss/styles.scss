@@ -1,0 +1,40 @@
+// All partial styles import
+
+// Core variables, mixins and placeholders
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/placeholders';
+@import 'helpers/utilities';
+@import 'helpers/scaffolding';
+@import 'helpers/font-import';
+
+// Components
+@import 'components/typography';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/sliders';
+@import 'components/features';
+@import 'components/tile-product';
+@import 'components/category-tile';
+@import 'components/breadcrumbs';
+@import 'components/widgets';
+@import 'components/pagination';
+@import 'components/badge';
+@import 'components/cart';
+@import 'components/alert';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/navigation';
+@import 'layout/home';
+@import 'layout/subscribe';
+@import 'layout/catalog';
+@import 'layout/single-product';
+@import 'layout/account';
+@import 'layout/checkout';
+@import 'layout/discount';
+@import 'layout/delivery';
+@import 'layout/contacts';
+
+// Modules

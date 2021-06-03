@@ -1,0 +1,464 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+  //- ********** Settings **********
+  //- ==============================
+  -var pageTitle = 'Catalog'
+  //- ==============================
+  //- ********* Settings END *******
+
+
+//- Page Content
+block content
+
+  //Catalog Title, Filter Toggles etc.
+  section.bg-dim-light
+    .container
+      ul.breadcrumbs.list-unstyled.m-0.d-none.d-lg-block
+        li
+          a(href="index.html") Главная
+        li
+          a(href="#") Cвадебный декор
+        li Свечи декоративныые
+
+      .filter-tools
+        .filter-tools-header
+          h1.h1 Свечи декоративные
+          .d-flex.align-items-center
+            span 854 товаров
+            .filters-choosen
+              span.filter-choosen
+                | Венчальные (49)
+                i.ds-close
+              span.filter-choosen
+                | Квадрат (32)
+                i.ds-close
+              span.filter-choosen
+                | Красный (49)
+                i.ds-close
+
+        .filter-tools-footer
+          button.filters-toggle.data-toggle(data-target="#filters-sidebar" data-classes="active" data-overflow="true" data-backdrop="true")
+            span Фильтровать
+            i.ds-filter
+          span.mr-3.color-gray-light.d-none.d-lg-block Сортировка
+          select.input-sm.simple-select-drop
+            option По популярности
+            option По убыванию цены
+            option По возрастанию цены
+
+  section.bg-dim-light
+    .container.d-flex.align-items-start
+
+      //Filters Section, Same section for Mobile
+      aside.filters-menu.bg-white.d-none.d-lg-block#filters-sidebar
+        .filter-tools-mobile.d-lg-none.border-bottom
+          button.close-sidebar.data-toggle(data-target="#filters-sidebar" data-classes="active" data-overflow="true" data-backdrop="true")
+            i.ds-close
+          a(href="#").cart Корзина
+            span.color-gray-light 2
+          .d-flex.align-items-center.flex-column.flex-lg-row
+            span 854 товаров
+            .filters-choosen
+              span.filter-choosen
+                | Венчальные (49)
+                i.ds-close
+              span.filter-choosen
+                | Венчальные (49)
+                i.ds-close
+              span.filter-choosen
+                | Венчальные (49)
+                i.ds-close
+              span.filter-choosen
+                | Венчальные (49)
+                i.ds-close
+
+        //Widget List or Menu
+        .widget.widget-list-items
+          .widget-title.opacity-50.color-gray-light.font-weight-bold Свадебный декор
+          ul
+            li
+              a(href="#") Стеклянные, акриловые подвески
+            li
+              a(href="#") Бобины, катушки, жемчуг
+            li
+              a(href="#") Декоративная мешковина
+            li.active
+              a(href="#") Декоративные часы
+            li
+              a(href="#") Фонари декоративные
+            li
+              a(href="#") Фоторамки
+            li
+              a(href="#") Декоративные колонны
+            li
+              a(href="#") Изделия из металла
+            li
+              a(href="#") Смотреть все
+
+        //Range SLider Widget
+        .widget.widget-range-slider
+          .widget-title Цена
+
+          .extra-controls
+            .input
+              input.inp.js-from.input-sm(type='text', value='0')
+            .mx-2 -
+            .input
+              input.inp.js-to.input-sm(type='text', value='1000')
+            button.btn.btn-solid.btn-accent.btn-sm Ok
+          .range-slider
+            input.js-range-slider(type='text', value='')
+
+
+        //Widget List or Menu
+        .widget.widget-list-items
+          .widget-title Вид
+          ul
+            li
+              label.checkbox-inline
+                .form-check
+                  input(type="checkbox" checked="checked")
+                  .check-mark
+                | Ароматические
+                span.color-gray-light (1)
+            li
+              label.checkbox-inline
+                .form-check
+                  input(type="checkbox")
+                  .check-mark
+                | Венчальные
+                span.color-gray-light (49)
+            li
+              label.checkbox-inline
+                .form-check
+                  input(type="checkbox")
+                  .check-mark
+                | Декоративные
+                span.color-gray-light (43)
+            li
+              label.checkbox-inline
+                .form-check
+                  input(type="checkbox")
+                  .check-mark
+                | Подарочные
+                span.color-gray-light (12)
+
+            li
+              label.checkbox-inline
+                .form-check
+                  input(type="checkbox")
+                  .check-mark
+                | Хозяйственные
+                span.color-gray-light (25)
+
+
+        //Widget List or Menu
+        .widget.widget-list-items
+          .widget-title Форма
+          ul
+            li
+              label.checkbox-inline.disabled
+                .form-check
+                  input(type="checkbox" disabled)
+                  .check-mark
+                | Квадрат
+                span.color-gray-light (87)
+            li
+              label.checkbox-inline
+                .form-check
+                  input(type="checkbox")
+                  .check-mark
+                | Конус
+                span.color-gray-light (34)
+            li
+              label.checkbox-inline
+                .form-check
+                  input(type="checkbox")
+                  .check-mark
+                | Круг
+                span.color-gray-light (13)
+            li
+              label.checkbox-inline.disabled
+                .form-check
+                  input(type="checkbox" disabled)
+                  .check-mark
+                | Призма
+                span.color-gray-light (54))
+
+            li
+              label.checkbox-inline.disabled
+                .form-check
+                  input(type="checkbox" disabled)
+                  .check-mark
+                | Сердце
+                span.color-gray-light (14)
+
+
+      //Container for Items
+      .catalog-items
+        div(style="background-color: #E5EAFA;")
+          .row
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/01.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+
+                  .badge.badge-danger
+                    | Акция
+                a(href="#").tile-title Кашпо металлическое овальное
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/01.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое овальное
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/02.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+
+                  .badge.badge-info
+                    | Новинка
+                a(href="#").tile-title Кашпо металлическое
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/03.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое овальное Кашпо металлическое овальное
+                .tile-text Цена за единицу: 429,45
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold.color-danger 1283
+                      |
+                      | грн
+                    span.old-price 1400 грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/04.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт Цена за единицу: 429,45 грн В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/03.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое овальное
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/01.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/02.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое овальное
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/03.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое овальное
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/04.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое овальное
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+            .col-6.col-md-4.col-lg-6.col-xl-3
+              .tile-product
+                a(href="#").tile-product-img
+                  img(src="img/product-tile/03.jpg")
+                  button.tile-favorite
+                    i.ds-favotite
+                a(href="#").tile-title Кашпо металлическое овальное
+                .tile-text
+                  | Цена за единицу: 429,45 грн
+                  br
+                  | В упаковке: 3шт
+
+                .tile-footer
+                  .tile-price
+                    span
+                      span.font-weight-bold 1283
+                      |
+                      | грн
+                  a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+
+        //Pagination
+        .pagination
+          a(href="#").prev-pag
+            i.ds-keyboard_arrow_left-24px
+
+          ul.list-unstyled
+            li.active
+              a(href="#") 1
+            li
+              a(href="#") 2
+            li
+              a(href="#") 3
+            li
+              a(href="#") 4
+            li
+              a(href="#") 5
+            li ...
+            li
+              a(href="#") 11
+
+          a(href="#").next-pag
+            i.ds-keyboard_arrow_right-24px
+
+
+  section.bg-dim-light.pt-5.pb-3
+    .container.mt-3
+      h5.h5.color-gray-light SEO TEXT
+
+      p.color-gray-light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed sodales arcu. Duis quis tempor dolor. Suspendisse id libero semper, tempor metus a, mollis dui. Aenean iaculis dapibus lectus a porta. Aliquam sit amet orci enim. Sed lobortis libero vel mi ultricies fermentum. Suspendisse id porta ante
+
+  //Subcribe Section
+  include partials/subscribe
+
+
+
+

@@ -1,0 +1,64 @@
+//
+// Utilities
+// --------------------------------------------------
+
+//Background colors ------------------
+.bg-accent { background-color: $accent;}
+.bg-primary { background-color: $primary;}
+.bg-white { background-color: #fff;}
+.bg-dim-light { background-color: $light-dim-bg;}
+
+//Colors
+.color-danger { color: $danger !important;}
+.color-gray-light { color: $gray-light !important;}
+.color-gray { color: $gray !important;}
+
+//Font Sizes
+.text-sm { font-size: $font-size-sm;}
+.text-md { font-size: $font-size-md;}
+.text-lg { font-size: $font-size-lg;}
+.text-xl { font-size: $font-size-xl;}
+.text-lead { font-size: $font-size-lead;}
+
+//Font Weight
+.font-weight-semi-bold { font-weight: 600;}
+
+//Paddings
+.py-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media (max-width: $tablet-land) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.pt-100 {
+  padding-top: 100px;
+  @media (max-width: $tablet-land) {
+    padding-top: 40px;
+  }
+}
+.pb-100 {
+  padding-bottom: 100px;
+  @media (max-width: $tablet-land) {
+    padding-bottom: 40px;
+  }
+}
+
+.py-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.pt-80 { padding-top: 80px;}
+.pb-80 { padding-bottom: 80px;}
+
+//Opacity Classes
+.opacity-100 { opacity: 1 !important; }
+.opacity-90 { opacity: .9 !important; }
+.opacity-80 { opacity: .8 !important; }
+.opacity-75 { opacity: .75 !important; }
+.opacity-60 { opacity: .6 !important; }
+.opacity-50 { opacity: .5 !important; }
+.opacity-25 { opacity: .25 !important; }
+.opacity-15 { opacity: .15 !important; }

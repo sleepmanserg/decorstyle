@@ -1,0 +1,33 @@
+// Site Header
+header.site-header
+  include topbar
+
+  .container.navbar.d-flex.align-items-center.justify-content-end.flex-nowrap
+    button.burger-toggle.unstyled-button.mobileMenuTrigger
+      i.ds-burger
+
+    a(href="index.html").logo-main.ml-0
+      img(src="img/logo-main.svg")
+
+    nav.main-navigation#target
+      a(href="#").bg-accent.text-white.main-toggle Каталог товаров
+        i.ds-keyboard_arrow_down-24px.icon
+
+      .sub-menu.bg-white
+        include navigation
+
+    .search-main
+      form
+        input(placeholder="Поиск")
+        button(type="submit")
+          i.ds-search
+
+    .navbar-tools
+      a(href="#")
+        i.ds-favotite.mr-2
+        span Вишлист
+
+      a(data-toggle="modal" href="#cartModal")
+        i.ds-bag.mr-2
+        span Корзина
+

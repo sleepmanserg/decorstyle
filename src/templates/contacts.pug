@@ -1,0 +1,55 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Discount'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+
+	//Catalog Title, Filter Toggles etc.
+	section.bg-dim-light
+		.container
+			ul.breadcrumbs.list-unstyled.m-0.d-none.d-lg-block.pb-0
+				li
+					a(href="index.html") Главная
+				li Контакты
+		.container
+			h1.m-0.pb-4.pt-4 Контакты
+	section.bg-dim-light.contacts
+		.container
+			.row
+				.col-xl-4.col-lg-5.col-md-6.mb-5
+					h4.m-0.pb-4 Телефоны
+					ul.mb-4
+						li 
+							strong Отдел декора
+							a(href="tel:+380633063209") +38 (063) 306-32-09
+						li 
+							strong Отдел декора
+							a(href="tel:+380635771463") +38 (063) 577-14-63
+						li 
+							strong Отдел упаковки
+							a(href="tel:+380686231588") +38 (068) 623-15-88
+					p.mb-0 Принимаем звонки: Пн.-Вс.: 08:00-16:00 
+					p.mb-0 Заказы через сайт принимаем 24/7 
+					a(href="#") decorstyle.com.ua@gmail.com
+				.col-xl-4.col-lg-5.col-md-6
+					h4.m-0.pb-4 Адрес
+					p.mb-0 5-ая площадка, магазин №676 - Отдел декора
+					p.mb-4 5-ая площадка, магазин №677 - Отдел упаковки 
+					p.mb-0 Магазин работает с 6:00-15:00 
+					p.mb-0 Пятница-выходной 
+					p.mb-0 Одесса, 65120, Украина
+
+	//Subcribe Section
+	include partials/subscribe
+
+
+
+

@@ -1,0 +1,75 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Discount'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+
+	//Catalog Title, Filter Toggles etc.
+	section.bg-dim-light
+		.container
+			ul.breadcrumbs.list-unstyled.m-0.d-none.d-lg-block.pb-0
+				li
+					a(href="index.html") Главная
+				li Оплата и доставка
+		.container
+			h1.m-0.pb-4.pt-4 Оплата и доставка
+	section.bg-dim-light.delivery
+		.container
+			.row
+				.col-xl-6.mb-5
+					h4.m-0.pb-5 Доставка
+					p.mb-4
+						strong "Новая почта", "Деливери", "Автолюкс" и "Ин-Тайм".
+						|  Доставка оплачивается клиентом при получении товара на отделении транспортной компании. Доставка осуществляется в течении 1-4 дней в зависимости от населенного пункта.
+					p.mb-4
+						strong Доставка Ин-Тайм 
+						| — заказы от 5000 грн.
+					p.mb-4
+						| Так же возможен самовывоз заказа с нашего склада в Одессе "7км" 
+						strong по предварительной договоренности.
+					p.mb-4
+						| Услуга «Наложенный платеж наличными» доступна только компанией "Новая Ночта" и ИСКЛЮЧИТЕЛЬНО на заказы до 1500 грн.
+
+				.col-xl-4.col-md-6.offset-xl-1.mb-5
+					.delivery-companies-wrap
+						.delivery-companies
+							img(src="./img/delivery/nova-poshta.png", alt="Новая почта")
+							img(src="./img/delivery/in-time.png", alt="Ин-тайм")
+						.delivery-companies
+							img(src="./img/delivery/delivery.png", alt="Деливери")
+							img(src="./img/delivery/autolux.png", alt="Автолюкс")
+				.col-12
+					h4.m-0.pb-4 Оплата
+					h5.m-0.pb-5 Возможны три способа оплаты вашего заказа:
+					.payment-list.d-flex
+						.payment-info.mb-5
+							span 1 
+							p Оплата на карту "Приват Банк" (комиссия перевода составляет 0.5%)
+						.payment-info.mb-5
+							span 2
+							p Оплата при получении (только "Новая почта") (обращаем Ваше внимание, на то, что транспортные компании взимают оплату и процент за денежный перевод)
+						.payment-info.mb-5
+							span 3
+							p Так же вы можете оплатить заказ наличными при самовывозе с нашего склада в Одессе "7км" по предварительной договоренности.
+
+				
+			
+
+			
+
+
+
+	//Subcribe Section
+	include partials/subscribe
+
+
+
+

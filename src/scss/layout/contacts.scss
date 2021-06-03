@@ -1,0 +1,22 @@
+.contacts {
+	color: $gray;
+	padding-bottom: 150px;
+	a {
+		color: $gray;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			strong {
+				margin-right: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet-port) {
+	.contacts {
+		padding-bottom: 70px;
+	}
+}

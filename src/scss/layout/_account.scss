@@ -1,0 +1,144 @@
+//
+// Account Pages
+// --------------------------------------------------
+
+.account-sidebar {
+  flex: 0 0 262px;
+  margin-right: 40px;
+  overflow: auto;
+  background-color: #fff;
+
+  @media (max-width: $tablet-land) {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-right: 0;
+    background-color: transparent;
+  }
+}
+
+.address-edit {
+  position: relative;
+  border: 1px solid #E5EAFA;
+  padding: 17px 24px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+
+  .edit-icon {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    text-decoration: none;
+    color: $gray;
+    &:hover { color: $accent;}
+  }
+}
+
+.bg-white-desktop {
+  background-color: #fff;
+  @media (max-width: $tablet-land) {
+    background-color: transparent;
+  }
+}
+
+//Orders
+.order-item-wrap {
+  border: 1px solid rgba($gray-lighter, .3);
+  margin: 20px 0;
+  border-radius: 2px;
+}
+.order-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 18px 24px;
+
+  i.ds-keyboard_arrow_down-24px {
+    transition: .25s;
+  }
+
+  .order-status {
+    flex: 0 0 200px;
+  }
+
+  &.collapsed {
+    i.ds-keyboard_arrow_down-24px {
+      position: relative;
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: $tablet-port) {
+    position: relative;
+    padding-right: 65px;
+    i.ds-keyboard_arrow_down-24px {
+      position: absolute !important;
+      display: block;
+      top: 50%;
+      right: 15px;
+      margin-top: -12px;
+    }
+
+    .order-status {
+      width: 100%;
+    }
+  }
+}
+
+.order-info-wrap {
+  .order-info {
+    padding: 18px 24px;
+
+    .order-data {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+          margin-bottom: 6px;
+        }
+      }
+
+      .dotted-list {
+        li {
+          display: flex;
+          white-space: nowrap;
+
+          &::after {
+            content: '';
+            width: 100%;
+            border-bottom: 1px dotted rgba($gray-lighter, .3);
+            margin-bottom: 6px;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.order-menu {
+  li {
+    padding-right: 20px;
+  }
+
+  a {
+    display: block;
+    border-bottom: 2px solid transparent;
+    padding: 12px 0;
+    text-decoration: none;
+    color: $gray-lighter;
+    margin-bottom: -1px;
+
+    &.active {
+      color: $accent;
+      border-color: $accent;
+    }
+  }
+}

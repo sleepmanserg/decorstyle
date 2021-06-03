@@ -1,0 +1,311 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+  //- ********** Settings **********
+  //- ==============================
+  -var pageTitle = 'Checkout'
+  -var isHeaderSpecial = true
+  //- ==============================
+  //- ********* Settings END *******
+
+//- Page Content
+block content
+
+  //Catalog Title, Filter Toggles etc.
+  section.bg-dim-light
+    .container
+      h1.pt-5.pb-4.m-0 Оформление заказа
+
+  section.bg-dim-light.pb-5
+    .container
+      .row
+        .col-lg-6.col-xl-5
+          h4  Получатель
+
+          .mb-5.mt-4
+            ul.nav.border-bottom.order-menu.d-flex.flex-nowrap
+              li.w-100
+                a.text-lg.text-center.font-weight-semi-bold.active.show(data-toggle="tab", href='#tab1', role='tab') Я новый покупатель
+              li.w-100
+                a.text-lg.text-center.font-weight-semi-bold(data-toggle="tab", href='#tab2', role='tab') Я постоянный покупатель
+
+
+            // Tab panes
+            .tab-content.pb-5.pt-4
+              #tab1.tab-pane.fade.show.active(role='tabpanel')
+                .mb-4
+                  label.color-gray.opacity-60.mb-2 Имя и фамилия
+                  input(type="text" placeholder="Игорь Петров")
+                .mb-4
+                  label.color-gray.opacity-60.mb-2 E-mail
+                  input(type="email" placeholder="test@gmail.com")
+                .mb-5
+                  label.color-gray.opacity-60.mb-2 Телефон
+                  input(type="tel" placeholder="+380 11 111 11 11")
+
+                h4  Получатель
+
+                .my-4
+                  label.color-gray.opacity-60.mb-2 Ваш Город
+                  .search-complete.input-md.w-100
+                    select
+                      option Одесса
+                      option Киев
+                      option Николаев
+                      option Херсон
+                      option Львов
+                      option Тернополь
+                      option Винница
+                      option Ивано-Франковск
+
+                .mb-4
+                  .color-gray.opacity-60.mb-2 Способ доставки
+                  label.form-radio
+                    input(type='radio', checked='checked', name='radio')
+                    .siblling
+                      span.checkmark
+                      span Самовывоз из Новой Почты
+
+                    .siblling.secelect-box.pl-4.ml-2.py-3
+                      .search-complete.input-md.w-100
+                        select
+                          option №2 ул. Бережанская, 9
+                          option №2 ул. Бережанская, 10
+                          option №2 ул. Бережанская, 11
+                          option №2 ул. Бережанская, 12
+                          option №2 ул. Бережанская, 13
+                          option №2 ул. Бережанская, 14
+
+                    .siblling.meta-info.pl-4.ml-2.pb-3
+                      .color-gray-light Будет передан в службу доставки сегодня
+
+                    .price от 50 грн
+
+                  label.form-radio
+                    input(type='radio', name='radio')
+                    .siblling
+                      span.checkmark.siblling
+                      sapn Адресная доставка Новой Почтой
+
+                    .siblling.secelect-box.pl-4.ml-2.py-3
+                      .search-complete.input-md.w-100
+                        select
+                          option №2 ул. Бережанская, 9
+                          option №2 ул. Бережанская, 10
+                          option №2 ул. Бережанская, 11
+                          option №2 ул. Бережанская, 12
+                          option №2 ул. Бережанская, 13
+                          option №2 ул. Бережанская, 14
+
+                    .siblling.meta-info.pl-4.ml-2.pb-3
+                      .color-gray-light Будет передан в службу доставки сегодня
+
+                    .price от 50 грн
+
+                  label.form-radio
+                    input(type='radio', name='radio')
+                    .siblling
+                      span.checkmark.siblling
+                      span Отделение Интайм
+
+                    .siblling.secelect-box.pl-4.ml-2.py-3
+                      .search-complete.input-md.w-100
+                        select
+                          option №2 ул. Бережанская, 9
+                          option №2 ул. Бережанская, 10
+                          option №2 ул. Бережанская, 11
+                          option №2 ул. Бережанская, 12
+                          option №2 ул. Бережанская, 13
+                          option №2 ул. Бережанская, 14
+
+                    .siblling.meta-info.pl-4.ml-2.pb-3
+                      .color-gray-light Будет передан в службу доставки сегодня
+
+                    .price от 75 грн
+
+                  label.form-radio
+                    input(type='radio', name='radio')
+                    .siblling
+                      span.checkmark.siblling
+                      span  Отделение Деливери
+
+                    .siblling.secelect-box.pl-4.ml-2.py-3
+                      .search-complete.input-md.w-100
+                        select
+                          option №2 ул. Бережанская, 9
+                          option №2 ул. Бережанская, 10
+                          option №2 ул. Бережанская, 11
+                          option №2 ул. Бережанская, 12
+                          option №2 ул. Бережанская, 13
+                          option №2 ул. Бережанская, 14
+
+                    .siblling.meta-info.pl-4.ml-2.pb-3
+                      .color-gray-light Будет передан в службу доставки сегодня
+
+                    .price от 30 грн
+
+                  label.form-radio
+                    input(type='radio', name='radio')
+                    .siblling
+                      span.checkmark.siblling
+                      span  Самовывоз в Одессе
+
+                    .siblling.secelect-box.pl-4.ml-2.py-3
+                      .search-complete.input-md.w-100
+                        select
+                          option №2 ул. Бережанская, 9
+                          option №2 ул. Бережанская, 10
+                          option №2 ул. Бережанская, 11
+                          option №2 ул. Бережанская, 12
+                          option №2 ул. Бережанская, 13
+                          option №2 ул. Бережанская, 14
+
+                    .siblling.meta-info.pl-4.ml-2.pb-3
+                      .color-gray-light Можно забрать 5 октября с 11:00 в Одессе на промрынке «7 километр»  5-ая площадка, Магазин №676
+
+                    .price Бесплатно
+
+
+
+                .color-gray.opacity-60.mb-2 Способы оплаты
+                .pb-4.d-flex.align-items-md-center.justify-content-start.flex-column.flex-md-row
+                  label.form-radio
+                    input(type='radio', name='paymentType')
+                    .siblling
+                      span.checkmark.siblling
+                      span  Наложенный платеж
+
+
+                  label.form-radio.ml-0.ml-md-4
+                    input(type='radio', name='paymentType')
+                    .siblling
+                      span.checkmark.siblling
+                      span  На карту «ПриватБанка»
+
+                //Use .disabled or [disabled] for diasabled btns
+                a(data-toggle="modal" href="#orderConfirmModal").btn.btn-solid.btn-accent.w-100 Подтвердить заказ
+
+
+              #tab2.tab-pane.fade(role='tabpanel')
+                h5.py-2.mb-4 Вход в личный кабинет
+                .row
+                  .col-lg-7
+                    .mb-4
+                      label.color-gray.opacity-60.mb-2 Ваш E-mail
+                      input(type="email")
+                    .mb-4
+                      label.color-gray.opacity-60.mb-2 Пароль
+                      input(type="password")
+                    .mb-4.d-flex.justify-content-between
+                      label.checkbox-inline.d-flex.align-items-center
+                        .form-check
+                          input(type="checkbox")
+                          .check-mark
+                        | Запомнить меня
+
+                      .m-0
+                        a(data-dismiss="modal" data-toggle="modal" href="#passRecoverModal").blue-link.text-md Забыли пароль?
+
+                    .mt-4
+                      button(type="submit").btn.btn-solid.btn-accent.w-100.justify-content-center Войти
+
+                  .col-lg-5.mt-4.mt-lg-0
+                    .color-gray.opacity-60.mb-2.text-center.text-lg-left Авторизация через соц.сети
+                    .d-flex.flex-column.flex-sm-row.flex-lg-column.justify-content-lg-start.justify-content-sm-center
+                      a(href="#").btn.btn-social.d-flex.align-items-center.justify-content-center
+                        img(src="img/socials/facebook.svg")
+                        span.color-gray Facebook
+
+                      a(href="#").btn.btn-social.d-flex.align-items-center.justify-content-center.mt-3.mt-sm-0.mt-lg-3.ml-sm-3.ml-lg-0
+                        img(src="img/socials/google.svg")
+                        span.color-gray Google
+
+
+
+        .col-lg-6.col-xl-6.offset-xl-1.d-none.d-md-block
+          .cart-table.border.pl-4.pr-5.py-2
+
+            .d-flex.justify-content-between.align-items-center.pt-4
+              h4 Товары в корзине
+              a(href="#").blue-link Изменить заказ
+
+            //Cart Item
+            .cart-item.border-bottom
+              .cart-item-thumb
+                img(src="img/cart-thumb/01.jpg")
+
+              .cart-item-body
+                .cart-item-info
+                  .cart-item-name
+                    | Подсвечник стеклянный "Ones"
+
+                .cart-item-meta
+                  .cart-qty
+                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                  .cart-price.mr-0
+                    .price.font-weight-semi-bold 356,00 грн
+
+            //Cart Item
+            .cart-item.border-bottom
+              .cart-item-thumb
+                img(src="img/cart-thumb/02.jpg")
+
+              .cart-item-body
+                .cart-item-info
+                  .cart-item-name
+                    | Свеча декоративная "Simple" 12шт/уп.
+
+                .cart-item-meta
+                  .cart-qty
+                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                  .cart-price.mr-0
+                    .price.font-weight-semi-bold 367,60 грн
+
+            //Cart Item
+            .cart-item.border-bottom
+              .cart-item-thumb
+                img(src="img/cart-thumb/01.jpg")
+
+              .cart-item-body
+                .cart-item-info
+                  .cart-item-name
+                    | Подсвечник стеклянный "Ones"
+
+                .cart-item-meta
+                  .cart-qty
+                    .title.color-gray-light.mb-2.text-sm 2 шт
+
+                  .cart-price.mr-0
+                    .price.font-weight-semi-bold 356,00 грн
+
+
+
+            .order-total.d-flex.justify-content-between.align-items-center.py-3
+              span Итого
+              .text-lead.font-weight-bold.ml-auto.mr-0 76 683 грн
+
+  //!!!IMPORTANT!!!
+  //If modal contain select2 with search input
+  //Please make sure that modal parent has attribute tabindex='-1' removed!
+  //It has collision
+
+  // Modal Address Edit
+  #orderConfirmModal.modal.fade(role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content.p-4
+        .modal-header.d-flex.justify-content-between.p-0.border-0.mb-4
+          h4 Спасибо за заказ
+          i.close.ds-close.text-md(data-dismiss='modal', aria-label='Close')
+
+        .modal-main
+          p Номер вашего заказа: 44343. Менеджер свяжется с вами для уточнения деталей. Вы можете отслеживать статус вашего заказа в личном кабинете
+
+          .py-3.d-flex.align-items-md-center.justify-content-between.flex-column
+
+            a(href="#").btn.btn-solid.btn-accent сохранить
+
+            a(href="index.html").blue-link.mt-4 Вернуться главную

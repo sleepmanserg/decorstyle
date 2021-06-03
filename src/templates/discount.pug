@@ -1,0 +1,72 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Discount'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+
+	//Catalog Title, Filter Toggles etc.
+	section.bg-dim-light
+		.container
+			ul.breadcrumbs.list-unstyled.m-0.d-none.d-lg-block.pb-0
+				li
+					a(href="index.html") Главная
+				li Скидки
+		.container
+			h1.m-0.pb-4.pt-4 Система скидок
+	section.bg-dim-light.discount
+		.container
+			.row
+				.col-xl-5.col-lg-5
+					h5.m-0.pb-5 Для всех клиентов на любой товар действуют скидки:
+					ul.mb-5.p-0.discount-list
+						li 
+							span 3%  
+							| - на товары приобретенные от 1200 - до 5000 грн;
+						li 
+							span 5% 
+							| - на товары от 5000 - до 10000 грн; 
+						li
+							span 7% 
+							| - на покупку от 10000- до 15000 грн;
+						li
+							span 10% 
+							| - от 15000 грн. и выше.
+					ul.p-0.discount-descr
+						li — Скидка не закрепляется за клиентом 
+						li — Cкидка распространяется только на заказы через сайт 
+						li
+							| — Скидка не дейсвует на акционные товары и на товары из 
+							br
+							|  категории "бижутерия и заколки"
+				.col-xl-7.col-lg-7
+					ul.discount-boxes.pl-0
+						li
+							span от 1200 до 5 000
+							| 3%
+						li 
+							span от 5 000 до 10 000
+							| 5%
+						li 
+							span от 10 000 до 15 000
+							| 7%
+						li 
+							span от 15 000
+							| 10%
+			
+
+
+
+	//Subcribe Section
+	include partials/subscribe
+
+
+
+

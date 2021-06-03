@@ -1,0 +1,23 @@
+//
+// Footer
+// --------------------------------------------------
+.site-footer {
+  background-color: #23252A;
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  a {
+    text-decoration: none;
+    &:hover { opacity: .8;}
+  }
+}
+.socials {
+  a {
+    display: inline-block;
+    margin-right: 10px;
+    > * {
+      max-width: 18px;
+    }
+
+  }
+}

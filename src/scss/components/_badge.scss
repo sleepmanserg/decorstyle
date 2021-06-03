@@ -1,0 +1,39 @@
+//
+// Badge
+// --------------------------------------------------
+.badge {
+  position: absolute;
+  font-size: 12px;
+  height: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(255, 16, 16, 0.1);
+  border-radius: 2px;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  &.badge-danger {
+    background-color: rgba($danger, .95);
+  }
+  &.badge-info {
+    background-color: rgba(#4D76FB, .95);
+  }
+}
+
+.single-product-description {
+  .badge {
+    top: -14px;
+    left: 26px;
+  }
+}
+
+.tile-product-img {
+  .badge {
+    top: 17px;
+    left: 15px;
+  }
+}

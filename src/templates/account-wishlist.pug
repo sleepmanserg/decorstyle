@@ -1,0 +1,187 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+  //- ********** Settings **********
+  //- ==============================
+  -var pageTitle = 'Account Wishlist'
+  //- ==============================
+  //- ********* Settings END *******
+
+//- Page Content
+block content
+
+  //Catalog Title, Filter Toggles etc.
+  section.bg-dim-light
+    .container
+      h1.pt-5.pb-4.m-0 Список желаний
+
+  section.bg-dim-light.pb-5
+    .container.d-flex.align-items-start.flex-column.flex-lg-row
+
+      //Filters Section, Same section for Mobile
+      aside.account-sidebar
+
+        //Widget List or Menu
+        .widget.widget-list-items.mobile-horizontal
+          ul
+            li
+              a(href="account-data.html") Мои данные
+            li
+              a(href="account-address.html") Адреса доставки
+            li.active.d-none.d-lg-block
+              a(href="account-wishlist.html") Список желаний
+            li
+              a(href="account-orders.html") Мои заказы
+
+
+      //Container for Items
+      .w-100.p-2.p-lg-3.bg-white-desktop
+        //Container for Items
+        .catalog-items
+          div(style="background-color: #E5EAFA;")
+            .row
+              .col-6.col-md-4.col-lg-6.col-xl-3
+                .tile-product
+                  a(href="#").tile-product-img
+                    img(src="img/product-tile/01.jpg")
+                    button.tile-favorite
+                      i.ds-close
+
+                    .badge.badge-danger
+                      | Акция
+                  a(href="#").tile-title Кашпо металлическое овальное
+                  .tile-text
+                    | Цена за единицу: 429,45 грн
+                    br
+                    | В упаковке: 3шт
+
+                  .tile-footer
+                    .tile-price
+                      span
+                        span.font-weight-bold 1283
+                        |
+                        | грн
+                    a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+              .col-6.col-md-4.col-lg-6.col-xl-3
+                .tile-product
+                  a(href="#").tile-product-img
+                    img(src="img/product-tile/01.jpg")
+                    button.tile-favorite
+                      i.ds-close
+                  a(href="#").tile-title Кашпо металлическое овальное
+                  .tile-text
+                    | Цена за единицу: 429,45 грн
+                    br
+                    | В упаковке: 3шт
+
+                  .tile-footer
+                    .tile-price
+                      span
+                        span.font-weight-bold 1283
+                        |
+                        | грн
+                    a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+              .col-6.col-md-4.col-lg-6.col-xl-3
+                .tile-product
+                  a(href="#").tile-product-img
+                    img(src="img/product-tile/02.jpg")
+                    button.tile-favorite
+                      i.ds-close
+
+                    .badge.badge-info
+                      | Новинка
+                  a(href="#").tile-title Кашпо металлическое
+                  .tile-text
+                    | Цена за единицу: 429,45 грн
+                    br
+                    | В упаковке: 3шт
+
+                  .tile-footer
+                    .tile-price
+                      span
+                        span.font-weight-bold 1283
+                        |
+                        | грн
+                    a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+              .col-6.col-md-4.col-lg-6.col-xl-3
+                .tile-product
+                  a(href="#").tile-product-img
+                    img(src="img/product-tile/03.jpg")
+                    button.tile-favorite
+                      i.ds-close
+                  a(href="#").tile-title Кашпо металлическое овальное Кашпо металлическое овальное
+                  .tile-text Цена за единицу: 429,45
+
+                  .tile-footer
+                    .tile-price
+                      span
+                        span.font-weight-bold.color-danger 1283
+                        |
+                        | грн
+                      span.old-price 1400 грн
+                    a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+              .col-6.col-md-4.col-lg-6.col-xl-3
+                .tile-product
+                  a(href="#").tile-product-img
+                    img(src="img/product-tile/04.jpg")
+                    button.tile-favorite
+                      i.ds-close
+                  a(href="#").tile-title Кашпо металлическое
+                  .tile-text
+                    | Цена за единицу: 429,45 грн
+                    br
+                    | В упаковке: 3шт Цена за единицу: 429,45 грн В упаковке: 3шт
+
+                  .tile-footer
+                    .tile-price
+                      span
+                        span.font-weight-bold 1283
+                        |
+                        | грн
+                    a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+              .col-6.col-md-4.col-lg-6.col-xl-3
+                .tile-product
+                  a(href="#").tile-product-img
+                    img(src="img/product-tile/03.jpg")
+                    button.tile-favorite
+                      i.ds-close
+                  a(href="#").tile-title Кашпо металлическое овальное
+                  .tile-text
+                    | Цена за единицу: 429,45 грн
+                    br
+                    | В упаковке: 3шт
+
+                  .tile-footer
+                    .tile-price
+                      span
+                        span.font-weight-bold 1283
+                        |
+                        | грн
+                    a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
+
+              .col-6.col-md-4.col-lg-6.col-xl-3
+                .tile-product
+                  a(href="#").tile-product-img
+                    img(src="img/product-tile/01.jpg")
+                    button.tile-favorite
+                      i.ds-close
+                  a(href="#").tile-title Кашпо металлическое
+                  .tile-text
+                    | Цена за единицу: 429,45 грн
+                    br
+                    | В упаковке: 3шт
+
+                  .tile-footer
+                    .tile-price
+                      span
+                        span.font-weight-bold 1283
+                        |
+                        | грн
+                    a(href="#").btn.btn-accent.btn-outline.btn-sm Купить
